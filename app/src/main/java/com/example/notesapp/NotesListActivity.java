@@ -43,8 +43,8 @@ public class NotesListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
                 TextView idTextView = view.findViewById(R.id.id);
-                TextView titleTextView = findViewById(R.id.title);
-                TextView descTextView = findViewById(R.id.desc);
+                TextView titleTextView = view.findViewById(R.id.title);
+                TextView descTextView = view.findViewById(R.id.desc);
 
                 String id = idTextView.getText().toString();
                 String title = titleTextView.getText().toString();
@@ -52,9 +52,9 @@ public class NotesListActivity extends AppCompatActivity {
 
                 Intent modify_intent  = new Intent(getApplicationContext(), ModifyNoteActivity.class);
 
+                modify_intent.putExtra("id",id);
                 modify_intent.putExtra("title",title);
                 modify_intent.putExtra("desc",desc);
-                modify_intent.putExtra("id",id);
 
                 startActivity(modify_intent);
             }

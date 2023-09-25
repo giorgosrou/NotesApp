@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="6dp"
         android:padding="3dp"
-        android:visibility="visible">
+        android:visibility="invisible">
 
     </TextView>
 

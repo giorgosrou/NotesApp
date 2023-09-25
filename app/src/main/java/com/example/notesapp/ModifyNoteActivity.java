@@ -37,21 +37,17 @@ public class ModifyNoteActivity extends Activity implements View.OnClickListener
 
         Intent intent = getIntent();
         String id  = intent.getStringExtra("id");
-        String name = intent.getStringExtra("name");
+        String title = intent.getStringExtra("title");
         String desc = intent.getStringExtra("desc");
 
         _id = Long.parseLong(id);
 
-        titleModified.setText(name);
+        titleModified.setText(title);
         descModified.setText(desc);
         updtBtn.setOnClickListener(this);
         dltBtn.setOnClickListener(this);
 
-
-
-
     }
-
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
